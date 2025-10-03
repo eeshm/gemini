@@ -4,7 +4,7 @@ This is a fully functional, responsive, and visually appealing frontend clone of
 
 The application is frontend-only and simulates backend interactions (like OTP validation and AI responses) using browser-based tools.
 
-**[Live Demo](YOUR_DEPLOYMENT_LINK_HERE)**
+**[Live Demo](gemini-eesh-kuvata.vercel.app)**
 **[Video Demo](https://www.loom.com/share/7ad8d14711284604abe4353919ef6489?sid=19b14d94-7882-436e-a0d5-6d5ac36dfa67)**
 **[UI Images](https://drive.google.com/drive/folders/1569LXU5NJrPYpBpgds6u8A9qkSYNu1q7?usp=sharing)**
 
