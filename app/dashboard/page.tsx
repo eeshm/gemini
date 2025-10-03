@@ -3,21 +3,21 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/authStore";
-import AuthPage from "@/components/auth/auth-page";
+import Dashboard from "@/components/dashboard/dashboard";
 
-export default function Home() {
+export default function DashboardPage() {
   const router = useRouter();
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
 
   useEffect(() => {
-    if (isAuthenticated) {
-      router.push("/dashboard");
+    if (!isAuthenticated) {
+      router.push("/");
     }
   }, [isAuthenticated, router]);
 
-  if (isAuthenticated) {
+  if (!isAuthenticated) {
     return null;
   }
 
-  return <AuthPage />;
+  return <Dashboard />;
 }

@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 11%;
+    --card: 0 0% 60%;
+    --card-foreground: 0 0% 11%;
+    --primary: 220 80% 55%;
+    --primary-foreground: 216 100% 91%;
+    --secondary: 217 100% 82%;
+    --secondary-foreground: 0 0% 21%;
+    --muted: 217 100% 82%;
+    --muted-foreground: 225 9% 74%;
+    --accent: 217 100% 82%;
+    --accent-foreground: 0 0% 21%;
+    --border: 217 100% 86%;
+    --input: 217 100% 86%;
+    --ring: 220 80% 55%;
+  }
+
+  .dark {
+    --background: 0 0% 11%;
+    --foreground: 216 100% 91%;
+    --card: 240 10% 62%; 
+    --card-foreground: 216 100% 91%;
+    --primary: 213 100% 65%;
+    --primary-foreground: 0 0% 21%;
+    --secondary: 347 25% 49%;
+    --secondary-foreground: 216 100% 91%;
+    --muted: 347 25% 49%;
+    --muted-foreground: 210 19% 76%;
+    --accent: 347 25% 49%;
+    --accent-foreground: 216 100% 91%;
+    --border: 347 25% 49%;
+    --input: 347 25% 49%;
+    --ring: 210 100% 71%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    border-color: hsl(var(--border)); /* Use plain CSS here */
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+.chat-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
 }
