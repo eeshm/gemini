@@ -81,13 +81,13 @@ export default function PhoneInput({
         <select
           {...register("countryCode")}
           disabled={fetchingCountries}
-          className="w-full px-4 py-3 border bg-input border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent disabled:opacity-50"
+          className="w-full px-4 py-3 bg-none rounded-lg  border-black border focus:ring-2 focus:ring-none  focus:border-transparent disabled:opacity-50"
         >
           {fetchingCountries ? (
             <option>Loading countries...</option>
           ) : (
             countries.map((country) => (
-              <option key={country.code} value={country.dialCode}>
+              <option key={country.code} value={country.dialCode} className="bg-black text-white">
                 {country.name} ({country.dialCode})
               </option>
             ))
@@ -108,7 +108,7 @@ export default function PhoneInput({
             {...register("phoneNumber")}
             type="tel"
             placeholder="Enter your phone number"
-            className="w-full pl-10 pr-4 py-3 border bg-input border-border rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent"
+            className="w-full pl-10 pr-4 py-3 border bg-input border-black rounded-lg focus:ring-2 focus:ring-ring focus:border-transparent"
           />
         </div>
         {errors.phoneNumber && (

@@ -125,9 +125,9 @@ export default function Sidebar({ onClose }: { onClose: () => void }) {
               </div>
               <button
                 onClick={(e) => handleDeleteChatroom(room.id, e)}
-                className="opacity-0 group-hover:opacity-100 p-1 rounded hover:bg-destructive/10 transition-opacity"
+                className=" group-hover:opacity-100 p-1 text-black rounded hover:bg-destructive/10 transition-opacity"
               >
-                <Trash2 className="w-4 h-4 text-destructive" />
+                <Trash2 className="w-4 h-4 text-red-500 " />
               </button>
             </div>
           ))
@@ -151,7 +151,7 @@ export default function Sidebar({ onClose }: { onClose: () => void }) {
         </button>
         <button
           onClick={handleLogout}
-          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-destructive hover:bg-destructive/10 transition-colors"
+          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-red-600 hover:text-red-900 transition-colors"
         >
           <LogOut className="w-5 h-5" />
           <span className="text-sm font-medium">Logout</span>

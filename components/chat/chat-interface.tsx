@@ -176,7 +176,7 @@ export default function ChatInterface({ chatroomId }: { chatroomId: string }) {
       <div className="bg-card border-b border-border p-4 flex items-center gap-3">
         <button
           onClick={() => router.push("/dashboard")}
-          className="p-2 rounded-lg hover:bg-accent lg:hidden"
+          className="p-2 rounded-lg hover:bg-accent"
         >
           <ArrowLeft className="w-5 h-5 text-foreground" />
         </button>
