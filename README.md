@@ -18,8 +18,8 @@ The application is frontend-only and simulates backend interactions (like OTP va
 
 ## Screenshots
 
-![Light Mode Screenshot](YOUR_IMAGE_LINK_HERE)
-![Dark Mode Screenshot](YOUR_IMAGE_LINK_HERE)
+![Light Mode Screenshot](./public/light.png)
+![Dark Mode Screenshot](./public/dark.png)
 
 ---
 
